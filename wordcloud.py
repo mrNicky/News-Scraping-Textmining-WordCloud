@@ -45,5 +45,5 @@ w = WordCloud(width=1000, height=300, max_words=100, contour_width=3, contour_co
 plt.figure( figsize=(15,7), facecolor='k')
 plt.imshow(w)
 plt.axis("off")
-plt.show()
 plt.savefig('wordcloud.png', facecolor='k', bbox_inches='tight')
+plt.show()
