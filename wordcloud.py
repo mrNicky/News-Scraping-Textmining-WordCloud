@@ -23,8 +23,9 @@ soup = BeautifulSoup(r.text, 'html.parser')
 results = soup.find_all('span', attrs={'class':'article__title-label'})
 titre = [results[i].text for i in range(len(results))]
 
+other_words = ['entre', 'depuis', 'avant', 'avant', 'quel', 'fait', 'déjà']
 #French STOP WORDS and Ponctuations
-pat = r'\b(?:{})\b'.format('|'.join(stopwords))
+pat = r'\b(?:{})\b'.format('|'.join(stopwords+other_words))
 p = r'[^\w\s]+'
 
 #Create a DataFrame
